@@ -1,0 +1,11 @@
+.tag{
+    width: 10px;
+    height: 10px;
+    background-color: var(--bs-gray-400);
+}
+.tagsContainer{
+    display: flex;
+    padding: 0 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}

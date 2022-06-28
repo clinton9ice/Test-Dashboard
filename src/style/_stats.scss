@@ -1,0 +1,40 @@
+@import "./breakpoints";
+
+.stats_container{
+    position: relative;
+    list-style: none;
+    @include respond-to("medium"){
+        flex-wrap: wrap;
+    }
+    .list-item
+    {
+        width: 100%;
+        min-width: 300px;
+        position: relative;
+        progress{
+            position: relative;
+            background: #fff;
+            border: none;
+            height: 10px;
+            border-radius: 3px;
+            appearance: none;
+        }
+
+        &::before{
+            background-color: red;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            // padding: 0.5rem;
+            position: absolute;
+            left: 0;
+            vertical-align: middle;
+            top: 0;
+            bottom: 40px;
+            margin: auto;
+        }
+
+    }
+
+}
