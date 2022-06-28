@@ -30,7 +30,7 @@ function App() {
                 <div className="description d-flex">
                   <div className="left_data_container">
                     <div>
-                      Searches <div className="badge"></div>
+                      Searches <sup className="badge bg-success">50%</sup>
                     </div>
 
                     <p>
