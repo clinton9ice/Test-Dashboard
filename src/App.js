@@ -1,7 +1,7 @@
 import React from "react";
 import { ActiveTabProvider } from "./Store/Context/ActiveTabs";
 
-import { Tab, Stats, ProgressStats, Status } from "./Components";
+import { Tab, Stats, ProgressStats, Status, DataList } from "./Components";
 
 function App() {
   return (
@@ -24,32 +24,25 @@ function App() {
         <div className="container">
           <div className="data-container">
             <ul className="list">
-              <li className="d-flex align-items-start">
-                <div className="icon-badge"></div>
+              <DataList
+                p1="29 380 Yesterday"
+                s1="27 985 Last friday"
+                header1="Searches"
+                rate={50}
+                p2="You get 100% traffic on mobile and desktop devices."
+                header2={["Mobile traffic: 100% ", "Web traffic: 100% "]}
+              />
 
-                <div className="description d-flex">
-                  <div className="left_data_container">
-                    <div>
-                      Searches <sup className="badge bg-success">50%</sup>
-                    </div>
-
-                    <p>
-                      29 380
-                      <span className="text-muted">yesterday</span>
-                    </p>
-
-                    <div className="text-muted">
-                      27985 <span>last friday</span>
-                    </div>
-                  </div>
-
-                  <div className="right_data_container">
-                    <p className="text-danger">CTR: 0,04%</p>
-                    <p className="text-muted small">Conventous</p>
-                    <p className="small">Help: CTK, CRS</p>
-                  </div>
-                </div>
-              </li>
+              <DataList
+                header1="Clicks"
+                header2="CTR: 0,04%"
+                icon="bi bi-fingerprint"
+                p1="243 Yesterday"
+                s1="280 Last friday"
+                rate="-13"
+                p2="Conversion from searches  to clicks on all devices."
+                small={`Help: CTR, Cliks`}
+              />
             </ul>
           </div>
         </div>
