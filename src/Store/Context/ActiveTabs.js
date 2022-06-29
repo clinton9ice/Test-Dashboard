@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useReducer } from "react";
 import { activeReducer, activeState } from "../Reducer/ActiveReducer";
 
 const activeTabContext = createContext({ isActive: null });
+ 
 // Custom Hook
 export const useActiveTab = () => useContext(activeTabContext);
 
@@ -10,6 +11,7 @@ export const ActiveTabProvider = ({ children }) => {
     activeReducer,
     activeState
   );
+
   const dispatcher = useCallback((e) => {
     dispatchActiveTab({ type: e });
   }, []);

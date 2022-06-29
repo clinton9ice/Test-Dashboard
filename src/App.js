@@ -1,9 +1,10 @@
-import React from "react";
 import { ActiveTabProvider } from "./Store/Context/ActiveTabs";
 
+// Import Components
 import { Tab, Stats, ProgressStats, Status, DataList } from "./Components";
 
 function App() {
+
   return (
     <div className="container-fluid">
       <h3 className="title">Main Metrics</h3>
@@ -42,6 +43,16 @@ function App() {
                 rate="-13"
                 p2="Conversion from searches  to clicks on all devices."
                 small={`Help: CTR, Cliks`}
+              />
+
+              <DataList
+                p1="24 Yesterday"
+                s1="24 Last friday"
+                header1="Salees"
+                icon="bi bi-cart-fill"
+                p2="Conversion from cliks  to bookings on all devices.."
+                header2={["STR: 6.2% ", "Avg Check: 8903"]}
+                small="Help: STR, Bookings, Avg. Check"
               />
             </ul>
           </div>

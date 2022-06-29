@@ -9,14 +9,22 @@ export const DataList = ({
   rate,
   p1,
   p2,
-    small,
-  s1
+  small,
+  s1,
 }) => {
   return (
     <li className="d-flex align-items-start flex-wrap my-4">
       <div className="left_data_container d-flex flex-wrap me-5">
         <div className={Style.dataBadge}>
           <i className={icon || "bi bi-funnel-fill"}></i>
+          <div className={Style.stateContainer}>
+            <span
+              className={Style.state}
+              style={{
+                backgroundColor: Math.ceil(rate) < 1 ? " var(--bs-danger)" : "var(--bs-success)",
+              }}
+            ></span>
+          </div>
         </div>
 
         <div className="ms-3">
